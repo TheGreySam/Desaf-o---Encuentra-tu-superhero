@@ -1,0 +1,23 @@
+@import "abstract/vendorvariables";
+@import "vendors/bootstrap/bootstrap";
+
+
+@import "abstract/variables";
+
+body {
+
+
+
+};
+section {
+  display: grid;
+  justify-content: center;
+  div {
+
+
+  }
+  img {
+    width: 70%;
+    justify-content: center;
+  }
+};
