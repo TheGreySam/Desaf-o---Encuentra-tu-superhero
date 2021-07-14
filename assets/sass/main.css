@@ -9928,12 +9928,17 @@ h3 {
     border-color: #dee2e6;
   }
 }
+body {
+  display: block;
+  background-color: grey;
+}
+
 section {
-  display: grid;
+  margin: 50px;
   justify-content: center;
 }
 section img {
-  width: 70%;
+  width: 90%;
   justify-content: center;
 }
 
