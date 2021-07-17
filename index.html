@@ -16,16 +16,18 @@
 </nav>
 
 <section>
-  <div class="container shadow p-3 mb-5 bg-white rounded">
-    <img src="assets/img/sh1.jpg" alt="" class="img-fluid">
+  <div class="shadow p-3 mb-5 bg-white rounded">
+    <img src="assets/img/sh1.jpg" alt="" class="img-fluid" style="max-width: 500px;display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;">
     <br><br>
     <h3>Encuentra tu superhero</h3>
-    form
     <br>
     <h6>Encuentra el número del Superhero a buscar</<h5>
     <br><br>
     <form id="formulario">
-      <input type="number" name="" value="" class="form-control" id="superhero-imput">
+      <input type="number" name="" value="" class="form-control" id="superhero-input">
 
       <button type="submit" name="button" class="btn btn-primary" >Buscar</button>
     </form>
@@ -34,15 +36,15 @@
 </section>
 
 <section id="request-section">
-  <div class="card " id="tarjeta-superheroe">
-    <div class="row">
+  <div class="card" id="tarjeta-superheroe">
+    <div class="row align-items-center">
 
 
-    <div class="col-12 col-sm-6">
-      <img src="" alt="" class="img-fluid" id="imagen">
+    <div class="col">
+      <img src="" alt="" class="img-fluid shadow p-3 mb-5 bg-white rounded" id="imagen">
     </div>
-    <div class="col-12 col-sm-6">
-      <h1 id="nombre-superheroe"> </h1>
+    <div class="col shadow p-3 mb-5 bg-white rounded" >
+      <h3 id="nombre-superheroe"> </h3>
       <p id="publicadopor"></p>
       <hr>
       <p id="ocupacion"></p>
@@ -55,8 +57,12 @@
       <hr>
       <p id="alianzas"></p>
     </div>
-    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
-  </div>
+    <div class="col ">
+      <div id="chartContainer" style="height: 370px; width: 100%"></div>
+    </div>
+
+
+</div>
 </div>
 </section>
 
@@ -75,8 +81,7 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
     <script src="assets/js/script.js"></script>
 
   </body>

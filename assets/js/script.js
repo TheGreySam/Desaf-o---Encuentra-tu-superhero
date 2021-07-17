@@ -5,14 +5,14 @@ const requestSection = document.getElementById("request-section");
 console.log(formularioElement);
 
 function renderSuperhero(superhero) {
-  const imagen = document.getElementById("imagen")
-  const nombre = document.querySelector("#nombre")
+  const imagen = document.getElementById("imagen");
+  const nombre = document.querySelector("#nombre-superheroe");
   const publicadopor = $("#publicadopor");
-  const ocupacion = $("#ocupacion")
-  const aparicion = $("#aparicion")
-  const altura = $("#altura")
-  const peso = $("#peso")
-  const alianzas = $("#alianzas")
+  const ocupacion = $("#ocupacion");
+  const aparicion = $("#aparicion");
+  const altura = $("#altura");
+  const peso = $("#peso");
+  const alianzas = $("#alianzas");
 
   imagen.setAttribute("src", superhero.image.url);
   nombre.innerHTML = `Nombre: ${superhero.name}`;
@@ -27,28 +27,40 @@ function renderSuperhero(superhero) {
 function renderSuperheroChart(superhero) {
   const options = {
     title: {
-      text: "Gráfico del Superheroe",
+      text: "Grafico del Superheroe",
     },
-    data:[
+    data: [
       {
         type: "pie",
         dataPoints: [
-          {label: "inteligencia",
-          y: Number.parseInt(superhero.powerstats.intelligence),},
-          {label: "Fuerza",
-          y: Number.parseInt(superhero.powerstats.intelligence),},
-          {label: "Velocidad",
-          y: Number.parseInt(superhero.powerstats.intelligence),},
-          {label: "Durabilidad",
-          y: Number.parseInt(superhero.powerstats.intelligence),},
-          {label: "Poder",
-          y: Number.parseInt(superhero.powerstats.intelligence),},
-          {label: "Combate",
-          y: Number.parseInt(superhero.powerstats.intelligence),},
-        ]
-      }
-    ]
-  }
+          {
+            label: "Inteligencia",
+            y: Number.parseInt(superhero.powerstats.intelligence),
+          },
+          {
+            label: "Fuerza",
+            y: Number.parseInt(superhero.powerstats.strength),
+          },
+          {
+            label: "Velocidad",
+            y: Number.parseInt(superhero.powerstats.speed),
+          },
+          {
+            label: "Durabilidad",
+            y: Number.parseInt(superhero.powerstats.durability),
+          },
+          {
+            label: "Poder",
+            y: Number.parseInt(superhero.powerstats.power),
+          },
+          {
+            label: "Combate",
+            y: Number.parseInt(superhero.powerstats.combat),
+          },
+        ],
+      },
+    ],
+  };
   $("#chartContainer").CanvasJSChart(options);
 }
 
